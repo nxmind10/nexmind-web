@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nex Mind | Creadores del Éxito🔺</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            display: none;
+            padding: 20px;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .btn {
+            background: red;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .btn:hover {
+            background: darkred;
+        }
+        .rotating-text {
+            font-size: 24px;
+            height: 30px;
+            overflow: hidden;
+        }
+        .rotating-text span {
+            display: block;
+            animation: rotateText 6s infinite;
+        }
+        @keyframes rotateText {
+            0% { transform: translateY(0%); }
+            33% { transform: translateY(-100%); }
+            66% { transform: translateY(-200%); }
+            100% { transform: translateY(0%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay" id="overlay">
+        <h2>¿Estás seguro que quieres entrar?</h2>
+        <button class="btn" onclick="enterSite()">Sí</button>
+        <button class="btn">No</button>
+    </div>
+
+    <div class="container" id="main-content">
+        <h1>Nex Mind</h1>
+        <h2>Creadores del Éxito🔺</h2>
+        <p>Únete a nuestra comunidad de emprendedores y creadores.</p>
+        <button class="btn" onclick="window.open('https://discord.gg/dx65dbYs', '_blank')">Unirse al Club</button>
+        <p>Tienes que estar con gente como tú</p>
+        <p class="rotating-text">
+            <span>"Dicen que si te rodeas de 3 personas vagas, tú serás el 4."</span>
+            <span>"Si te rodeas de 3 personas mediocres, tú serás el 4."</span>
+            <span>"Pero si te rodeas de personas que luchan por sus objetivos… Tú serás el 4."</span>
+        </p>
+        <p>Esto no es un curso de pago (de momento). Es para conocer gente con tus mismas ambiciones.</p>
+        <h3>Lo que ofrecemos en el club:</h3>
+        <div>
+            <p>✅ Red de contactos</p>
+            <p>✅ Charlas inspiradoras</p>
+            <p>✅ Newsletter</p>
+            <p>✅ Noticias valiosas</p>
+        </div>
+        <p>Consulta: <a href="mailto:kcoellopereyra@gmail.com">kcoellopereyra@gmail.com</a></p>
+    </div>
+
+    <script>
+        function enterSite() {
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("main-content").style.display = "block";
+        }
+    </script>
+</body>
+</html>
